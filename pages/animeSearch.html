@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Anime</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="header">
+    <header class="text-center">
+      <h1>Busca Anime</h1>
+      <h2>Encuentra tu anime favorito aqui</h2>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Selecciona una API
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="../index.html">Rick and Morty</a></li>
+          <li><a class="dropdown-item" href="./pokeApi.html">Pokemon API</a></li>
+          <li><a class="dropdown-item" href="./animeSearch.html">busca anime</a></li>
+        </ul>
+      </div>
+    </header>
+  </div>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="input-group mb-3">
+          <input type="text" id="searchInput" class="form-control" placeholder="Escribe el nombre del anime">
+          <button id="searchButton" class="btn btn-primary">Buscar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="animeResults" class="container mt-4 row"></div>
+
+  <div id="pagination" class="pagination justify-content-center mt-4"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/animeSearch.js"></script>
+</body>
+
+</html>

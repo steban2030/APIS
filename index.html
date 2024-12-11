@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>API - Rick and Morty</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background-color: #343a40;
+      color: white;
+      padding: 20px 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1,
+    .header h2 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .dataAlbum {
+      margin-top: 254px;
+    }
+
+    .pagination {
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .btn {
+      font-size: 1rem;
+      color: #ffffff;
+      background-color: #007bff;
+      border: none;
+    }
+
+    .btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Estilo para el dropdown */
+    .dropdown-menu {
+      background-color: #343a40;
+      /* Fondo oscuro */
+      border: 1px solid #444;
+      /* Borde ligero */
+    }
+
+    .dropdown-item {
+      color: #ffffff;
+      /* Texto blanco por defecto */
+    }
+
+    .dropdown-item:hover {
+      background-color: #007bff;
+      /* Fondo azul en hover */
+      color: #ffffff;
+      /* Texto blanco en hover */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <header class="text-center">
+      <h1>Rick and Morty API</h1>
+      <h2>By Steban</h2>
+
+      <div class="dropdown mt-3">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Seleccionar una API
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="index.html">Rick and Morty API</a></li>
+          <li><a class="dropdown-item" href="pages/pokeApi.html">Pokemon API</a></li>
+          <li><a class="dropdown-item" href="pages/animeSearch.html">Busca Anime</a></li>
+        </ul>
+      </div>
+
+      <ul id="pagination" class="pagination mt-3"></ul>
+    </header>
+  </div>
+
+  <div class="container">
+    <div id="dataAlbum" class="dataAlbum row row-cols-1 row-cols-md-5 g-4"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+  <script src="./js/rickAndMortyApi.js"></script>
+</body>
+
+</html>
